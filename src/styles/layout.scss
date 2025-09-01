@@ -1,0 +1,25 @@
+.main {
+  display: grid;
+  box-sizing: border-box;
+  justify-items: center;
+  margin: 0;
+  padding: 50px 40px 72px;
+  gap: 46px 48px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $grid-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $grid-midle) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $grid-large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $grid-extra-large) {
+    padding: 50px 128px 72px;
+  }
+}
