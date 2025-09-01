@@ -33,6 +33,13 @@
     opacity: 1;
   }
 
+  &:hover {
+    transform: scale(1.2);
+    .card__title {
+      color: #34568b;
+    }
+  }
+
   &__code {
     top: 247px;
     left: 17px;
@@ -136,11 +143,6 @@
       text-transform: uppercase;
       letter-spacing: 0%;
       opacity: 1;
-
-      &:hover {
-        z-index: 4;
-        color: rgba(0, 172, 220, 1);
-      }
     }
 
     &:hover {

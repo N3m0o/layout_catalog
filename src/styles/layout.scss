@@ -3,23 +3,23 @@
   box-sizing: border-box;
   justify-items: center;
   margin: 0;
-  padding: 50px 40px 72px;
-  gap: 46px 48px;
-  grid-template-columns: repeat(1, 1fr);
+  padding: 50px 40px;
+  gap: $grid-row-gap $grid-column-gap;
+  grid-template-columns: repeat(auto-fit, $card-width);
 
   @media (min-width: $grid-small) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax($card-width, 1fr));
   }
 
   @media (min-width: $grid-midle) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax($card-width, 1fr));
   }
 
   @media (min-width: $grid-large) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax($card-width, 1fr));
   }
 
   @media (min-width: $grid-extra-large) {
-    padding: 50px 128px 72px;
+    padding: 50px 72px;
   }
 }
