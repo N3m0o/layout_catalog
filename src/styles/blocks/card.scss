@@ -2,10 +2,11 @@
 
 .card {
   box-sizing: border-box;
-  width: 200px;
+  width: $card-width;
   height: 408px;
   border: 1px solid rgba(243, 243, 243, 1);
   background: rgba(255, 255, 255, 1);
+  transition: transform $transition-time;
 
   &__photo {
     top: 33px;
@@ -36,7 +37,7 @@
   &:hover {
     transform: scale(1.2);
     .card__title {
-      color: #34568b;
+      color: $card-hover-color;
     }
   }
 
@@ -128,6 +129,9 @@
     text-decoration: none;
     opacity: 1;
     background-color: $button-color;
+    transition:
+      border $transition-time,
+      background-color $transition-time;
 
     &-text {
       position: absolute;
@@ -147,7 +151,10 @@
 
     &:hover {
       border: 1px solid rgba(0, 172, 220, 1);
-      background: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 1);
+      &-text {
+        color: #00acdc;
+      }
     }
   }
 }

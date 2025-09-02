@@ -46,7 +46,7 @@
     height: 60px;
     position: relative;
     padding: 0;
-    color: #060b35;
+    color: $header-nav-link-color;
     text-decoration: none;
 
     transition: color $transition-time ease;
